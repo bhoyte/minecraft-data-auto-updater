@@ -28,7 +28,7 @@ jobs:
             git clone https://github.com/u9g/minecraft-data-generator-server .
             git switch -f ${{ github.event.inputs.branch }}
             chmod +x gradlew
-            ./gradlew runServer --info
+            ./gradlew runServer --scan
             ls -R .
       - name: Save to Artifact
         uses: actions/upload-artifact@v3
